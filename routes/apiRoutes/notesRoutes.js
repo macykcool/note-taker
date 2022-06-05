@@ -1,34 +1,28 @@
+const router = require("express").Router();
+const data = require("../../db/db");
+
 //get/api/notes should read the db.json and return all saved notes as json
+router.get("/notes", (req, res) => {
+  data
+    .getNotes()
+    .then((notes) => res.json(notes))
+    .catch((err) => res.send(404).json(err));
+});
+
 //post/api/notes should receive a new note to save on the request body and add to the dbjson and then return new note to the client
-//each note needs a unique id (npm)
-//BONUS DELETE 
+router.post("/notes", (req, res) => {
+  data
+    .saveNote(req.body)
+    .then((note) => res.json(note))
+    .catch((err) => res.send(404).json(err));
+});
 
-const router = require('express').Router();
-const { data } = require('../../db/db');
-const { getNotes, saveNote, deleteNote } = require('../../lib/notes.js');
+//BONUS DELETE
+router.delete("/notes/:id", (req, res) => {
+data
+.deleteNote(req.params.id)
+.then(() => res.json({ ok: true }))
+.catch((err) => res.send(404).json(err));
+});
 
-
-router.get('/notes', (req, res) => {
-  console.log(getNotes())
-    const notes = getNotes()
-    // console.log(notes)
-    return notes
-    
-  });
-  
-  router.delete('/notes/:id', (req, res) => {
-    const result = findById(req.params.id, data);
-    if (result) {
-      res.json(result);
-    } else {
-      res.send(404);
-    }
-  });
-  
-  router.post('/notes', (req, res) => {
-    // set id based on what the next index of the array will be
-    req.body.id = data.length.toString();
-  
-  });
-
-  module.exports = router;
+module.exports = router;
