@@ -1,16 +1,19 @@
+//dependency
 const fs = require("fs");
 
+//unique id *that was not installed and was giving me lot of errors before -_-
 const { v4: uuidv4 } = require("uuid");
 
+//routing
 module.exports = function (app) {
-  
-  // API GET Request
+
+//get Request
   app.get("/api/notes", (request, response) => {
     let data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
     response.json(data);
   });
 
-  // API POST Request
+//post Request
   app.post("/api/notes", (request, response) => {
     const newNote = request.body;
     newNote.id = uuidv4();
@@ -20,7 +23,7 @@ module.exports = function (app) {
     response.json(data);
   });
 
-  // API DELETE request
+  //BONUS delete request
   app.delete("/api/notes/:id", (request, response) => {
     let noteId = request.params.id.toString();
     let data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));

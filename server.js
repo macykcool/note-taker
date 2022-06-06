@@ -17,5 +17,5 @@ require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
 
 app.listen(PORT, () => {
-  console.log(`API server now on port ${PORT}!`);
+  console.log(`API server now on port ${PORT}! Use hht`);
 });
