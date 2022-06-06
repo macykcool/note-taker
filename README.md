@@ -47,7 +47,7 @@ I was WRONG and overcomplicated it for myself. After meeting with my tutor, I re
 https://github.com/macykcool/note-taker
 
 ## Heroku Repository
-https://dashboard.heroku.com/apps/note-takermkm
+https://note-takermkm.herokuapp.com/
 
 ## Made with ❤️️ by Macy Mannix
 Mentored by UC Davis Full Stack Web Developer Bootcamp
