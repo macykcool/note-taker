@@ -14,7 +14,7 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 - [Process](#process)
 - [Demo Preview](#demo-preview)
 - [Github Repository](#github-repository)
-- [Heroku Repository](#heroku-repository)
+- [Heroku Deployed](#heroku-deployed)
 
 ## Description
 GIVEN a note-taking application
@@ -38,7 +38,7 @@ From there feel free to make notes, save and delete as you please.
 
 ## Process
 Cloned the starter code. I was expecting it to be much more similar to zookeepr *module work*, so I set up the code from that activity to get started. 
-I was WRONG and overcomplicated it for myself. After meeting with my tutor, I realized it would be a much simpler structure and I did not needs tests, library, multiple route folders, etc. Once I cleaned up the structure, I found the router was not as neccessary because there were not as many files/databases/etc so I changed my code from router to app. Then I thought I was getting somewhere, but was running into error after error. I kept restructing my code thinking I was calling things in the wrong order, but it turned out I forgot to install uuid 🙄 THEN it was working as intended. 
+I was WRONG and overcomplicated it for myself. After meeting with my tutor, I realized it would be a much simpler structure and I did not needs tests, library, multiple route folders, etc. Once I cleaned up the structure, I found the router was not as neccessary because there were not as many files/databases/etc so I changed my code from router to app. Then I thought I was getting somewhere, but was running into error after error. I kept restructuring my code thinking I was calling things in the wrong order, but it turned out I forgot to install uuid 🙄 THEN it was working as intended. 
 
 ## Demo Preview
 ![Note Taker demo](./gif/notetaker.gif)
@@ -46,7 +46,7 @@ I was WRONG and overcomplicated it for myself. After meeting with my tutor, I re
 ## Github Repository
 https://github.com/macykcool/note-taker
 
-## Heroku Repository
+## Heroku Deployed
 https://note-takermkm.herokuapp.com/
 
 ## Made with ❤️️ by Macy Mannix
